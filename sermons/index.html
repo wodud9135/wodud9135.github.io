@@ -1,0 +1,7 @@
+---
+layout: default
+title: 말씀과 찬양
+permalink: /sermons/
+---
+<section class="subhero"><div class="shell"><span class="eyebrow">THE WORD</span><h1>말씀과 찬양</h1><p>예배 가운데 선포된 말씀을 다시 나눕니다.</p></div></section>
+<section class="page-content"><div class="shell listing">{% assign records = site.sermons | sort: 'date' | reverse %}{% for record in records %}<a class="list-row" href="{{ record.url | relative_url }}"><div><h2>{{ record.title | escape }}</h2><p>{% if record.scripture != nil and record.scripture != '' %}{{ record.scripture | escape }} · {% endif %}{{ record.summary | escape }}</p></div><time datetime="{{ record.date | date: '%Y-%m-%d' }}">{{ record.date | date: '%Y.%m.%d' }}</time><span class="chevron">↗</span></a>{% else %}<div class="empty-state">등록된 설교가 없습니다.</div>{% endfor %}</div></section>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="900" viewBox="0 0 1800 900">
+ <defs>
+  <linearGradient id="wall" x1="0" y1="0" x2="0.9" y2="1"><stop stop-color="#e5dac5"/><stop offset=".54" stop-color="#b6a68f"/><stop offset="1" stop-color="#756f58"/></linearGradient>
+  <linearGradient id="ceil" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#b4b19a"/><stop offset=".5" stop-color="#8d8b77"/><stop offset="1" stop-color="#474f43"/></linearGradient>
+  <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#86765c"/><stop offset="1" stop-color="#4f4d40"/></linearGradient>
+  <linearGradient id="window" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff7da"/><stop offset=".5" stop-color="#e0cc9c"/><stop offset="1" stop-color="#8d9e8d"/></linearGradient>
+  <linearGradient id="pew" x1="0" y1="0" x2="0.2" y2="1"><stop stop-color="#bda47c"/><stop offset=".5" stop-color="#755d45"/><stop offset="1" stop-color="#392f28"/></linearGradient>
+  <radialGradient id="light" cx=".52" cy=".33" r=".73"><stop stop-color="#fffae5" stop-opacity=".33"/><stop offset="1" stop-color="#0f201b" stop-opacity=".35"/></radialGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="5"/></filter>
+  <pattern id="noise" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".5" fill="#fff" opacity=".06"/></pattern>
+ </defs>
+ <!-- chapel interior: deliberately stylized illustration, not a real church photo -->
+ <rect width="1800" height="900" fill="url(#wall)"/>
+ <path d="M0 0H1800V365L1380 235L905 42L415 231L0 364Z" fill="url(#ceil)"/>
+ <path d="M0 0H1800L1416 230L900 25L376 238Z" fill="#9b997f" opacity=".57"/>
+ <path d="M0 0L395 238V680H0Z" fill="#bab4a0"/>
+ <path d="M1800 0L1410 238V680H1800Z" fill="#d6c9ae"/>
+ <path d="M415 233L900 59L1385 231V702H415Z" fill="#a69c83"/>
+ <path d="M483 258L904 101L1324 257V674H483Z" fill="#c7b89b"/>
+ <path d="M0 692L900 540L1800 692V900H0Z" fill="url(#floor)"/>
+ <!-- architectural timbers -->
+ <path d="M422 228L898 37L1379 227" fill="none" stroke="#e3d4b1" stroke-width="19" opacity=".65"/>
+ <path d="M476 262L903 87L1325 261" fill="none" stroke="#655b4c" stroke-width="16" opacity=".35"/>
+ <path d="M677 174V629M1132 172V629" stroke="#83745e" stroke-width="16" opacity=".43"/>
+ <!-- windows -->
+ <g fill="url(#window)" stroke="#796f5a" stroke-width="15">
+  <path d="M520 375v-108q0-68 47-70t47 70v108z"/>
+  <path d="M1190 376V267q0-68 47-70t47 70v109z"/>
+  <path d="M736 390V265q0-125 162-144q165 19 165 144v125z"/>
+ </g>
+ <g stroke="#a89d7d" stroke-width="9" opacity=".72">
+  <path d="M568 204V377M522 304H614M1237 204V377M1191 304h93"/>
+  <path d="M899 123V390M736 287h326"/>
+ </g>
+ <path d="M893 180h14v146h-14z" fill="#614f38"/><path d="M846 226h108v15H846z" fill="#614f38"/>
+ <!-- altar and soft lighting -->
+ <rect x="741" y="448" width="320" height="29" rx="5" fill="#554a3c"/>
+ <rect x="762" y="470" width="21" height="94" fill="#665747"/><rect x="1019" y="470" width="21" height="94" fill="#665747"/>
+ <path d="M674 556h460v46H674z" fill="#897b62"/><path d="M713 602h382v74H713z" fill="#786950"/>
+ <!-- floor aisle -->
+ <path d="M816 646H982L1272 900H556Z" fill="#a39775" opacity=".52"/>
+ <!-- pews: perspective forms -->
+ <g fill="url(#pew)" stroke="#5a4a36" stroke-width="7" opacity=".95">
+ <path d="M0 645L676 644L738 672L0 738Z"/><path d="M0 726L721 684L765 734L0 824Z"/><path d="M0 818L749 750L795 820L0 900Z"/>
+ <path d="M1800 645L1124 644L1062 672L1800 738Z"/><path d="M1800 726L1079 684L1035 734L1800 824Z"/><path d="M1800 818L1051 750L1005 820L1800 900Z"/>
+ </g>
+ <g stroke="#d9bc8b" stroke-width="11" opacity=".4"><path d="M0 645 676 644M0 727 721 687M0 819 749 751M1800 645 1124 644M1800 727 1079 687M1800 819 1051 751"/></g>
+ <rect width="1800" height="900" fill="url(#light)"/>
+ <rect width="1800" height="900" fill="url(#noise)"/>
+</svg>

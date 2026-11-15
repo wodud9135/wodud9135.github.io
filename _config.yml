@@ -1,0 +1,43 @@
+title: 우리교회
+lang: ko
+locale: ko_KR
+description: 말씀과 사랑 안에서 함께 자라는 공동체
+url: ""
+baseurl: ""
+timezone: Asia/Seoul
+markdown: kramdown
+permalink: pretty
+collections:
+  notices:
+    output: true
+    permalink: /notices/:name/
+  bulletins:
+    output: true
+    permalink: /bulletins/:name/
+  sermons:
+    output: true
+    permalink: /sermons/:name/
+defaults:
+  - scope:
+      path: ""
+      type: notices
+    values:
+      layout: article
+      collection_label: 교회 소식
+  - scope:
+      path: ""
+      type: bulletins
+    values:
+      layout: article
+      collection_label: 교회 주보
+  - scope:
+      path: ""
+      type: sermons
+    values:
+      layout: article
+      collection_label: 설교 말씀
+exclude:
+  - README.md
+  - SETUP.md
+  - LICENSE
+  - .gitignore

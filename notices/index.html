@@ -1,0 +1,7 @@
+---
+layout: default
+title: 공지사항
+permalink: /notices/
+---
+<section class="subhero"><div class="shell"><span class="eyebrow">CHURCH NEWS</span><h1>교회 소식</h1><p>함께 기억하고 나눌 우리교회의 소식입니다.</p></div></section>
+<section class="page-content"><div class="shell listing"><nav class="list-tab-nav" aria-label="교회 소식 종류"><a href="{{ '/notices/' | relative_url }}" aria-current="page">공지사항</a><a href="{{ '/bulletins/' | relative_url }}">교회 주보</a></nav>{% assign records = site.notices | sort: 'date' | reverse %}{% for record in records %}<a class="list-row" href="{{ record.url | relative_url }}"><div><h2>{{ record.title | escape }}</h2><p>{{ record.summary | escape }}</p></div><time datetime="{{ record.date | date: '%Y-%m-%d' }}">{{ record.date | date: '%Y.%m.%d' }}</time><span class="chevron">↗</span></a>{% else %}<div class="empty-state">등록된 공지사항이 없습니다.</div>{% endfor %}</div></section>

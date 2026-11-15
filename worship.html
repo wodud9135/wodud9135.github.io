@@ -1,0 +1,8 @@
+---
+layout: default
+title: 예배 안내
+permalink: /worship/
+---
+{% assign s = site.data.settings %}
+<section class="subhero"><div class="shell"><span class="eyebrow">WORSHIP</span><h1>예배 안내</h1><p>하나님 앞에 함께 모이는 소중한 예배의 자리로 초대합니다.</p></div></section>
+<section class="page-content"><div class="shell"><span class="eyebrow">OUR WORSHIP</span><h2>함께 드리는 예배</h2><p class="section-subtitle">정확한 시간은 관리자 화면의 '교회 기본 정보'에서 변경할 수 있습니다.</p><div class="info-rows"><div><h3>주일예배</h3><p>{{ s.sunday_time | escape }}</p></div><div><h3>수요예배</h3><p>{{ s.wednesday_time | escape }}</p></div><div><h3>다음세대 예배</h3><p>{{ s.children_time | escape }}</p></div><div><h3>처음 방문하시나요?</h3><p>예배 전 여유 있게 방문하시고, 안내가 필요하시면 교회 연락처로 문의해 주세요.</p><a class="underlined-link" style="margin-top:15px" href="{{ '/directions/' | relative_url }}">오시는 길 ↗</a></div></div></div></section>

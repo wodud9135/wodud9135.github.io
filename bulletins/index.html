@@ -1,0 +1,7 @@
+---
+layout: default
+title: 교회 주보
+permalink: /bulletins/
+---
+<section class="subhero"><div class="shell"><span class="eyebrow">WEEKLY BULLETIN</span><h1>교회 주보</h1><p>매주 예배 순서와 교회 소식을 확인하세요.</p></div></section>
+<section class="page-content"><div class="shell listing"><nav class="list-tab-nav" aria-label="교회 소식 종류"><a href="{{ '/notices/' | relative_url }}">공지사항</a><a href="{{ '/bulletins/' | relative_url }}" aria-current="page">교회 주보</a></nav>{% assign records = site.bulletins | sort: 'date' | reverse %}{% for record in records %}<a class="list-row" href="{{ record.url | relative_url }}"><div><h2>{{ record.title | escape }}</h2><p>{{ record.summary | escape }}</p></div><time datetime="{{ record.date | date: '%Y-%m-%d' }}">{{ record.date | date: '%Y.%m.%d' }}</time><span class="chevron">↗</span></a>{% else %}<div class="empty-state">등록된 주보가 없습니다.</div>{% endfor %}</div></section>

@@ -1,0 +1,185 @@
+# Pages CMS 공식 설정 형식. 관리 화면: https://app.pagescms.org
+media:
+  - name: images
+    label: 이미지
+    input: assets/uploads/images
+    output: /assets/uploads/images
+    categories: [image]
+    rename: safe
+  - name: documents
+    label: PDF 및 문서
+    input: assets/uploads/documents
+    output: /assets/uploads/documents
+    categories: [document]
+    rename: safe
+content:
+  - name: notices
+    label: 공지사항
+    type: collection
+    path: _notices
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{hour}-{minute}-{second}.md"
+    view:
+      primary: title
+      fields: [title, date]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 제목
+        type: string
+        required: true
+      - name: date
+        label: 게시 날짜
+        type: date
+        required: true
+      - name: summary
+        label: 짧은 설명
+        type: text
+      - name: body
+        label: 본문 내용
+        type: rich-text
+        options:
+          media: images
+  - name: bulletins
+    label: 주보 등록
+    type: collection
+    path: _bulletins
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{hour}-{minute}-{second}.md"
+    view:
+      primary: title
+      fields: [title, date]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 주보 제목
+        type: string
+        required: true
+      - name: date
+        label: 예배 날짜
+        type: date
+        required: true
+      - name: summary
+        label: 간단한 안내
+        type: text
+      - name: pdf_file
+        label: 주보 PDF 파일
+        type: file
+        options:
+          media: documents
+          extensions: [pdf]
+      - name: body
+        label: 추가 공지
+        type: rich-text
+        options:
+          media: images
+  - name: sermons
+    label: 설교 영상
+    type: collection
+    path: _sermons
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{hour}-{minute}-{second}.md"
+    view:
+      primary: title
+      fields: [title, date]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 설교 제목
+        type: string
+        required: true
+      - name: date
+        label: 설교 날짜
+        type: date
+        required: true
+      - name: scripture
+        label: 성경 본문
+        type: string
+      - name: speaker
+        label: 설교자
+        type: string
+      - name: youtube_url
+        label: 유튜브 영상 주소
+        type: string
+        description: '예: https://www.youtube.com/watch?v=...'
+      - name: summary
+        label: 간단한 설명
+        type: text
+      - name: body
+        label: 설교 소개 및 내용
+        type: rich-text
+        options:
+          media: images
+  - name: settings
+    label: 교회 기본 정보
+    type: file
+    path: _data/settings.yml
+    format: yaml
+    operations:
+      delete: false
+    fields:
+      - name: church_name
+        label: 교회 이름
+        type: string
+      - name: hero_eyebrow
+        label: 상단 영문 문구
+        type: string
+      - name: hero_title
+        label: 메인 큰 제목
+        type: text
+      - name: hero_subtitle
+        label: 메인 설명
+        type: text
+      - name: welcome_title
+        label: 환영 제목
+        type: string
+      - name: welcome_text
+        label: 환영 설명
+        type: text
+      - name: vision_title
+        label: 교회 비전 제목
+        type: string
+      - name: vision_text
+        label: 교회 비전 설명
+        type: text
+      - name: sunday_time
+        label: 주일예배 시간
+        type: string
+      - name: wednesday_time
+        label: 수요예배 시간
+        type: string
+      - name: children_time
+        label: 교육부서 시간
+        type: string
+      - name: address
+        label: 교회 주소
+        type: string
+      - name: phone
+        label: 교회 전화번호
+        type: string
+      - name: email
+        label: 교회 이메일
+        type: string
+      - name: pastor
+        label: 담임목사
+        type: string
+      - name: youtube_url
+        label: 유튜브 채널 주소
+        type: string
+      - name: map_url
+        label: 지도 링크
+        type: string
+      - name: hero_image
+        label: 메인 배경 사진
+        type: image
+        options:
+          media: images

@@ -1,0 +1,8 @@
+---
+layout: default
+title: 교회 소개
+permalink: /about/
+---
+{% assign s = site.data.settings %}
+<section class="subhero"><div class="shell"><span class="eyebrow">ABOUT OUR CHURCH</span><h1>우리의 이야기</h1><p>말씀과 사랑으로 함께 걸어가는 {{ s.church_name | escape }}를 소개합니다.</p></div></section>
+<section class="page-content"><div class="shell page-grid"><div><span class="eyebrow">WELCOME</span><h2>{{ s.welcome_title | escape }}</h2><p>{{ s.welcome_text | escape }}</p></div><div class="infobox"><span class="eyebrow">OUR VISION</span><h2>{{ s.vision_title | escape }}</h2><p>{{ s.vision_text | escape }}</p></div></div><div class="shell info-rows"><div><span class="eyebrow">OUR COMMUNITY</span><h3>함께 예배하는 공동체</h3><p>누구나 편안하게 참여할 수 있는 예배의 자리를 소중히 여깁니다.</p></div><div><span class="eyebrow">PASTOR</span><h3>담임목사 소개</h3><p>{{ s.pastor | escape }}</p><p>담임목사 인사말과 소개는 교회 정보를 확인한 뒤 입력할 수 있습니다.</p></div></div></section>

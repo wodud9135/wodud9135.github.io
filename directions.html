@@ -1,0 +1,8 @@
+---
+layout: default
+title: 오시는 길
+permalink: /directions/
+---
+{% assign s = site.data.settings %}
+<section class="subhero"><div class="shell"><span class="eyebrow">VISIT US</span><h1>오시는 길</h1><p>처음 오시는 분도 편안하게 찾아오실 수 있도록 안내합니다.</p></div></section>
+<section class="page-content"><div class="shell page-grid"><div><span class="eyebrow">LOCATION</span><h2>{{ s.church_name | escape }}</h2><ul class="simple-list"><li><strong>주소</strong><span>{{ s.address | escape }}</span></li><li><strong>연락처</strong><span>{{ s.phone | escape }}</span></li><li><strong>주일예배</strong><span>{{ s.sunday_time | escape }}</span></li></ul>{% if s.map_url != nil and s.map_url != '' %}<a class="btn btn-primary" href="{{ s.map_url | escape }}" target="_blank" rel="noopener noreferrer" style="margin-top:27px">지도에서 길찾기 ↗</a>{% endif %}</div><div class="infobox"><span class="eyebrow">WELCOME</span><h2>곧 만나 뵙기를 기다립니다.</h2><p>주차장과 대중교통 안내는 실제 교회 위치 확인 후 입력해 주세요.</p><p style="margin-top:18px">지도 링크는 관리자 화면의 ‘교회 기본 정보’에서 추가할 수 있습니다.</p></div></div></section>
