@@ -41,3 +41,5 @@ exclude:
   - SETUP.md
   - LICENSE
   - .gitignore
+  - VISUAL-EDITOR-SETUP.md
+  - supabase

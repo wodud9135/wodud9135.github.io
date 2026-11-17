@@ -123,3 +123,13 @@ AI와 함께 제작한 교회 홈페이지 **초기 버전**입니다. 정적 �
 ---
 
 **기술 기반:** HTML + CSS + JavaScript + Jekyll (GitHub Pages 기본 정적 사이트 생성기) + Pages CMS (GitHub 저장소 파일 편집 UI).
+
+## 비주얼 홈페이지 편집기 (추가 기능)
+
+- 주소: `/admin/` — 기본 디자인 유지, 메인 페이지를 화면 보면서 수정 가능
+- 초기: Supabase 연동 전에는 체험 모드에서 로컬 미리보기 및 JSON 백업 가능
+- Supabase와 연결하면 관리자 이메일/비밀번호 로그인, 서버에 임시저장, 변경사항 게시, 사진 업로드 지원
+- 실제 연결 방법: [`VISUAL-EDITOR-SETUP.md`](VISUAL-EDITOR-SETUP.md)
+- SQL 정책: [`supabase/setup.sql`](supabase/setup.sql)
+- 연결 파일: `assets/js/site-config.js` (공개 키만 입력, secret/service_role 금지)
+- 주보·공지·설교의 기존 Pages CMS 기능은 그대로 유지됩니다.
